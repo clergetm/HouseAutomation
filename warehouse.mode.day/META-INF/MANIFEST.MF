@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Warehouse-day
+Bundle-SymbolicName: warehouse.mode.day
+Bundle-Version: 0.0.1
+Import-Package: org.json;version="0.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
