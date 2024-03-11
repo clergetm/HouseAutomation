@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Warehouse-client
+Bundle-SymbolicName: warehouse.client
+Bundle-Version: 0.0.1
+Import-Package: org.json;version="0.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
