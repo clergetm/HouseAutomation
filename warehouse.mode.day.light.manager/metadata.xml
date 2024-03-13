@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.day.light.manager.impl.LightManagerImpl" name="LightManager">
+    <provides specifications="fr.uga.warehouse.mode.day.light.manager.LightAdministration"/>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <provides specifications="fr.uga.warehouse.client.time.MomentOfTheDayListener"/>
+    <requires specification="fr.uga.warehouse.client.time.TimeService" field="timeService"/>
+    <requires optional="true" specification="fr.uga.warehouse.mode.day.light.service.autoon.AutoOnConfiguration" field="autoOnConfiguration"/>
+    <requires optional="true" specification="fr.uga.warehouse.mode.day.light.service.onoff.OnOffConfiguration" field="onOffConfiguration"/>
+  </component>
+  <instance component="LightManager" name="LightManager-1"/>
+</ipojo>
