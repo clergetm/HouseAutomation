@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.day.handler.BinaryLightHandlerImpl" name="BinaryLightHandler">
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.BinaryLight" field="binaryLights">
+      <callback method="bindBinaryLight" type="bind"/>
+      <callback method="unbondBinaryLight" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.presence.PresenceSensor" field="presenceSensors">
+      <callback method="bindPresenceSensors" type="bind"/>
+      <callback method="unbindPresenceSensors" type="unbind"/>
+    </requires>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+  </component>
+  <instance component="BinaryLightHandler" name="BinaryLightHandler"/>
 </ipojo>
