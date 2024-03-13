@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.client.time.impl.TimeImpl" name="TimeComponent">
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <provides specifications="fr.uga.warehouse.client.time.TimeService"/>
+    <provides specifications="fr.liglab.adele.icasa.service.scheduler.PeriodicRunnable"/>
+    <requires specification="fr.liglab.adele.icasa.clockservice.Clock" field="clock"/>
+  </component>
+  <instance component="TimeComponent" name="TimeComponent"/>
+</ipojo>
