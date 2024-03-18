@@ -12,9 +12,9 @@ import java.util.Map;
 /**
  * <u>BinaryLightHandlerImpl</u> allows you to:
  * <ul>
- * 	<li> Manage the presence of a person in a Location. </li>
- * 	<li> Manage the movement of a presence sensor. </li>
- * 	<li> Manage the movement of a binary light. </li>
+ * <li>Manage the presence of a person in a Location.</li>
+ * <li>Manage the movement of a presence sensor.</li>
+ * <li>Manage the movement of a binary light.</li>
  * </ul>
  * 
  * @author mathys
@@ -96,7 +96,6 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 		String location = (String) device.getPropertyValue(BinaryLightHandlerImpl.PROPERTY_LOCATION_NAME);
 		String objectType = (String) device.getPropertyValue(BinaryLightHandlerImpl.PROPERTY_OBJECT_NAME);
 
-		System.out.println("[TEST] location : " + location);
 		switch (propertyName) {
 		// The sensor detects a new presence or no longer detects a presence
 		case PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE:
