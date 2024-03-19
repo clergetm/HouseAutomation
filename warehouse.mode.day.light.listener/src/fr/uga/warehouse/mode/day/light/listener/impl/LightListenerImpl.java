@@ -1,4 +1,4 @@
-package fr.uga.warehouse.mode.day.handler;
+package fr.uga.warehouse.mode.day.light.listener.impl;
 
 import fr.liglab.adele.icasa.device.DeviceListener;
 import fr.liglab.adele.icasa.device.GenericDevice;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <u>BinaryLightHandlerImpl</u> allows you to:
+ * <u>LightListenerImpl</u> allows you to:
  * <ul>
  * <li>Manage the presence of a person in a Location.</li>
  * <li>Manage the movement of a presence sensor.</li>
@@ -19,7 +19,7 @@ import java.util.Map;
  * 
  * @author mathys
  */
-public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
+public class LightListenerImpl implements DeviceListener<GenericDevice> {
 
 	/** The property location as a const */
 	public static final String PROPERTY_LOCATION_NAME = "Location";
@@ -34,36 +34,36 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 	private BinaryLight[] binaryLights;
 
 	/** Bind Method for presenceSensors dependency */
-	public synchronized void bindPresenceSensors(PresenceSensor presenceSensor, Map<?, ?> properties) {
+	public synchronized void bindPresenceSensor(PresenceSensor presenceSensor, Map<?, ?> properties) {
 		System.out.println("[DAY] - bind presence sensor.");
 		presenceSensor.addListener(this);
-		presenceSensor.setPropertyValue(BinaryLightHandlerImpl.PROPERTY_OBJECT_NAME, PresenceSensor.class.getName());
+		presenceSensor.setPropertyValue(LightListenerImpl.PROPERTY_OBJECT_NAME, PresenceSensor.class.getName());
 	}
 
 	/** Unbind Method for presenceSensors dependency */
-	public synchronized void unbindPresenceSensors(PresenceSensor presenceSensor, Map<?, ?> properties) {
+	public synchronized void unbindPresenceSensor(PresenceSensor presenceSensor, Map<?, ?> properties) {
 		System.out.println("[DAY] - unbind presence sensor.");
-		presenceSensor.removeProperty(BinaryLightHandlerImpl.PROPERTY_OBJECT_NAME);
+		presenceSensor.removeProperty(LightListenerImpl.PROPERTY_OBJECT_NAME);
 		presenceSensor.removeListener(this);
 	}
 
 	/** Bind Method for binaryLights dependency */
 	public synchronized void bindBinaryLight(BinaryLight binaryLight, Map<?, ?> properties) {
 		System.out.println("[DAY] - bind binary light.");
-		binaryLight.setPropertyValue(BinaryLightHandlerImpl.PROPERTY_OBJECT_NAME, BinaryLight.class.getName());
+		binaryLight.setPropertyValue(LightListenerImpl.PROPERTY_OBJECT_NAME, BinaryLight.class.getName());
 		binaryLight.addListener(this);
 	}
 
 	/** Unbind Method for binaryLights dependency */
-	public synchronized void unbondBinaryLight(BinaryLight binaryLight, Map<?, ?> properties) {
+	public synchronized void unbindBinaryLight(BinaryLight binaryLight, Map<?, ?> properties) {
 		System.out.println("[DAY] - unbind binary light.");
-		binaryLight.removeProperty(BinaryLightHandlerImpl.PROPERTY_OBJECT_NAME);
+		binaryLight.removeProperty(LightListenerImpl.PROPERTY_OBJECT_NAME);
 		binaryLight.removeListener(this);
 	}
 
 	/** Component Lifecycle Method */
 	public synchronized void stop() {
-		System.out.println("[DAY] - Stopping BinaryLightHandler.");
+		System.out.println("[DAY] - Stopping LightListener.");
 
 		for (BinaryLight binaryLight : this.binaryLights) {
 			binaryLight.removeListener(this);
@@ -76,7 +76,7 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 
 	/** Component Lifecycle Method */
 	public void start() {
-		System.out.println("[DAY] - Starting BinaryLightHandler.");
+		System.out.println("[DAY] - Starting LightListener.");
 	}
 
 	@Override
@@ -93,8 +93,8 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 
 	@Override
 	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue, Object newValue) {
-		String location = (String) device.getPropertyValue(BinaryLightHandlerImpl.PROPERTY_LOCATION_NAME);
-		String objectType = (String) device.getPropertyValue(BinaryLightHandlerImpl.PROPERTY_OBJECT_NAME);
+		String location = (String) device.getPropertyValue(LightListenerImpl.PROPERTY_LOCATION_NAME);
+		String objectType = (String) device.getPropertyValue(LightListenerImpl.PROPERTY_OBJECT_NAME);
 
 		switch (propertyName) {
 		// The sensor detects a new presence or no longer detects a presence
@@ -111,7 +111,7 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 			}
 			break;
 		// We are moving a device
-		case BinaryLightHandlerImpl.PROPERTY_LOCATION_NAME:
+		case LightListenerImpl.PROPERTY_LOCATION_NAME:
 			// We are moving a Binary Light
 			if (BinaryLight.class.getName().equals(objectType)) {
 				BinaryLight light = (BinaryLight) device;
@@ -167,7 +167,7 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 	private synchronized List<BinaryLight> getBinaryLightFromLocation(String location) {
 		List<BinaryLight> lights = new ArrayList<>();
 		for (BinaryLight binLight : this.binaryLights) {
-			if (binLight.getPropertyValue(BinaryLightHandlerImpl.PROPERTY_LOCATION_NAME).equals(location)) {
+			if (binLight.getPropertyValue(LightListenerImpl.PROPERTY_LOCATION_NAME).equals(location)) {
 				lights.add(binLight);
 			}
 		}
@@ -183,7 +183,7 @@ public class BinaryLightHandlerImpl implements DeviceListener<GenericDevice> {
 	private synchronized List<PresenceSensor> getPresenceSensorFromLocation(String location) {
 		List<PresenceSensor> sensors = new ArrayList<>();
 		for (PresenceSensor sensor : this.presenceSensors) {
-			if (sensor.getPropertyValue(BinaryLightHandlerImpl.PROPERTY_LOCATION_NAME).equals(location)) {
+			if (sensor.getPropertyValue(LightListenerImpl.PROPERTY_LOCATION_NAME).equals(location)) {
 				sensors.add(sensor);
 			}
 		}
