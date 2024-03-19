@@ -4,6 +4,7 @@ import fr.liglab.adele.icasa.device.DeviceListener;
 import fr.liglab.adele.icasa.device.GenericDevice;
 import fr.liglab.adele.icasa.device.light.BinaryLight;
 import fr.liglab.adele.icasa.device.presence.PresenceSensor;
+import fr.uga.warehouse.mode.day.light.service.onoff.OnOffConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.Map;
  * 
  * @author mathys
  */
-public class LightListenerImpl implements DeviceListener<GenericDevice> {
+public class LightListenerImpl implements DeviceListener<GenericDevice>, OnOffConfiguration {
 
 	/** The property location as a const */
 	public static final String PROPERTY_LOCATION_NAME = "Location";
@@ -188,5 +189,21 @@ public class LightListenerImpl implements DeviceListener<GenericDevice> {
 			}
 		}
 		return sensors;
+	}
+
+	@Override
+	public void turnOffAllTheLights() {
+		for (BinaryLight light : this.binaryLights) {
+			light.turnOff();
+		}
+
+	}
+
+	@Override
+	public void turnOnAllTheLights() {
+		for (BinaryLight light : this.binaryLights) {
+			light.turnOn();
+		}
+
 	}
 }

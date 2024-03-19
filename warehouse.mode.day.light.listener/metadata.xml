@@ -11,6 +11,9 @@
     </requires>
     <callback method="start" transition="validate"/>
     <callback method="stop" transition="invalidate"/>
+    <provides specifications="fr.uga.warehouse.mode.day.light.service.onoff.OnOffConfiguration">
+      <property field="onOff" name="onOff" type="java.lang.String" value="binaryOnOff"/>
+    </provides>
   </component>
   <instance component="LightListener" name="LightListener-1"/>
 </ipojo>
