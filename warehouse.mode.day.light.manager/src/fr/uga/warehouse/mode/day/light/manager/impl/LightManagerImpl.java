@@ -4,6 +4,13 @@ import fr.uga.warehouse.mode.day.light.manager.LightAdministration;
 import fr.uga.warehouse.mode.day.light.service.onoff.OnOffConfiguration;
 import java.util.Map;
 
+/**
+ * <u>LightManagerImpl</u> implements the <u>LightAdministration</u> and 
+ * bind to <u>OnOffConfiguration</u>. In order to manipulate
+ * the lights of the whole map.
+ * 
+ * @author mathys
+ */
 public class LightManagerImpl implements LightAdministration {
 
 	/** Field for OnOffConfigurations dependency */
