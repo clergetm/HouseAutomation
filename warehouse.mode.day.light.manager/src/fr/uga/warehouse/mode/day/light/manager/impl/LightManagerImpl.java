@@ -11,6 +11,7 @@ public class LightManagerImpl implements LightAdministration {
 
 	@Override
 	public void turnOffAllTheLights() {
+		System.out.println("[DAY][MANAGER] - turning all lights off.");
 		for (OnOffConfiguration conf : this.OnOffConfigurations) {
 			conf.turnOffAllTheLights();
 		}
@@ -18,6 +19,7 @@ public class LightManagerImpl implements LightAdministration {
 
 	@Override
 	public void turnOnAllTheLights() {
+		System.out.println("[DAY][MANAGER] - turning all lights on.");
 		for (OnOffConfiguration conf : this.OnOffConfigurations) {
 			conf.turnOnAllTheLights();
 		}
