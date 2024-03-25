@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<behavior factor="1">
+
+	<!-- Zone Section -->
+
+	<create-zone  id ="Stockage 2" leftX ="634" topY ="874" bottomZ ="0" X-Length ="879" Y-Length ="141" Z-Length ="179"/>
+	<add-zone-variable zoneId="Stockage 2" variable="Area" />
+	<modify-zone-variable zoneId="Stockage 2" variable="Area" value="24.292046585947105" />
+	<add-zone-variable zoneId="Stockage 2" variable="Temperature" />
+	<modify-zone-variable zoneId="Stockage 2" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Stockage 2" variable="Electricity" />
+	<modify-zone-variable zoneId="Stockage 2" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Stockage 2" variable="Volume" />
+	<modify-zone-variable zoneId="Stockage 2" variable="Volume" value="60.875869763718285" />
+	<add-zone-variable zoneId="Stockage 2" variable="Illuminance" />
+	<modify-zone-variable zoneId="Stockage 2" variable="Illuminance" value="1600.0" />
+
+	<create-zone  id ="Stockage 1" leftX ="397" topY ="479" bottomZ ="0" X-Length ="1104" Y-Length ="385" Z-Length ="179"/>
+	<add-zone-variable zoneId="Stockage 1" variable="Area" />
+	<modify-zone-variable zoneId="Stockage 1" variable="Area" value="83.30784707466137" />
+	<add-zone-variable zoneId="Stockage 1" variable="Temperature" />
+	<modify-zone-variable zoneId="Stockage 1" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Stockage 1" variable="Electricity" />
+	<modify-zone-variable zoneId="Stockage 1" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Stockage 1" variable="Volume" />
+	<modify-zone-variable zoneId="Stockage 1" variable="Volume" value="208.76946826483777" />
+	<add-zone-variable zoneId="Stockage 1" variable="Illuminance" />
+	<modify-zone-variable zoneId="Stockage 1" variable="Illuminance" value="1600.0" />
+
+	<create-zone  id ="Parking Patrons" leftX ="7" topY ="480" bottomZ ="0" X-Length ="385" Y-Length ="415" Z-Length ="179"/>
+	<add-zone-variable zoneId="Parking Patrons" variable="Area" />
+	<modify-zone-variable zoneId="Parking Patrons" variable="Area" value="31.315901686286907" />
+	<add-zone-variable zoneId="Parking Patrons" variable="Temperature" />
+	<modify-zone-variable zoneId="Parking Patrons" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Parking Patrons" variable="Electricity" />
+	<modify-zone-variable zoneId="Parking Patrons" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Parking Patrons" variable="Volume" />
+	<modify-zone-variable zoneId="Parking Patrons" variable="Volume" value="78.47765093990252" />
+	<add-zone-variable zoneId="Parking Patrons" variable="Illuminance" />
+	<modify-zone-variable zoneId="Parking Patrons" variable="Illuminance" value="1600.0" />
+
+	<create-zone  id ="Stockage 3" leftX ="862" topY ="1020" bottomZ ="0" X-Length ="647" Y-Length ="126" Z-Length ="179"/>
+	<add-zone-variable zoneId="Stockage 3" variable="Area" />
+	<modify-zone-variable zoneId="Stockage 3" variable="Area" value="15.978313522851977" />
+	<add-zone-variable zoneId="Stockage 3" variable="Temperature" />
+	<modify-zone-variable zoneId="Stockage 3" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Stockage 3" variable="Electricity" />
+	<modify-zone-variable zoneId="Stockage 3" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Stockage 3" variable="Volume" />
+	<modify-zone-variable zoneId="Stockage 3" variable="Volume" value="40.04165435874377" />
+	<add-zone-variable zoneId="Stockage 3" variable="Illuminance" />
+	<modify-zone-variable zoneId="Stockage 3" variable="Illuminance" value="1600.0" />
+
+	<create-zone  id ="Parking Employés" leftX ="-9" topY ="-1" bottomZ ="0" X-Length ="1873" Y-Length ="471" Z-Length ="179"/>
+	<add-zone-variable zoneId="Parking Employés" variable="Area" />
+	<modify-zone-variable zoneId="Parking Employés" variable="Area" value="172.90787770751194" />
+	<add-zone-variable zoneId="Parking Employés" variable="Temperature" />
+	<modify-zone-variable zoneId="Parking Employés" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Parking Employés" variable="Electricity" />
+	<modify-zone-variable zoneId="Parking Employés" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Parking Employés" variable="Volume" />
+	<modify-zone-variable zoneId="Parking Employés" variable="Volume" value="433.30714879052823" />
+	<add-zone-variable zoneId="Parking Employés" variable="Illuminance" />
+	<modify-zone-variable zoneId="Parking Employés" variable="Illuminance" value="1600.0" />
+
+	<create-zone  id ="Accueil" leftX ="401" topY ="877" bottomZ ="0" X-Length ="221" Y-Length ="263" Z-Length ="179"/>
+	<add-zone-variable zoneId="Accueil" variable="Area" />
+	<modify-zone-variable zoneId="Accueil" variable="Area" value="11.392108867923753" />
+	<add-zone-variable zoneId="Accueil" variable="Temperature" />
+	<modify-zone-variable zoneId="Accueil" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Accueil" variable="Electricity" />
+	<modify-zone-variable zoneId="Accueil" variable="Electricity" value="100.0" />
+	<add-zone-variable zoneId="Accueil" variable="Volume" />
+	<modify-zone-variable zoneId="Accueil" variable="Volume" value="28.548625301048837" />
+	<add-zone-variable zoneId="Accueil" variable="Illuminance" />
+	<modify-zone-variable zoneId="Accueil" variable="Illuminance" value="7595.37807233055" />
+
+	<create-zone  id ="Contrôle" leftX ="632" topY ="1021" bottomZ ="0" X-Length ="223" Y-Length ="130" Z-Length ="179"/>
+	<add-zone-variable zoneId="Contrôle" variable="Area" />
+	<modify-zone-variable zoneId="Contrôle" variable="Area" value="5.682040125570296" />
+	<add-zone-variable zoneId="Contrôle" variable="Temperature" />
+	<modify-zone-variable zoneId="Contrôle" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Contrôle" variable="Electricity" />
+	<modify-zone-variable zoneId="Contrôle" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Contrôle" variable="Volume" />
+	<modify-zone-variable zoneId="Contrôle" variable="Volume" value="14.239192793107055" />
+	<add-zone-variable zoneId="Contrôle" variable="Illuminance" />
+	<modify-zone-variable zoneId="Contrôle" variable="Illuminance" value="1600.0" />
+
+	<create-zone  id ="Entrepot" leftX ="391" topY ="477" bottomZ ="0" X-Length ="1107" Y-Length ="662" Z-Length ="179"/>
+	<add-zone-variable zoneId="Entrepot" variable="Area" />
+	<modify-zone-variable zoneId="Entrepot" variable="Area" value="143.6354746844636" />
+	<add-zone-variable zoneId="Entrepot" variable="Temperature" />
+	<modify-zone-variable zoneId="Entrepot" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Entrepot" variable="Electricity" />
+	<modify-zone-variable zoneId="Entrepot" variable="Electricity" value="100.0" />
+	<add-zone-variable zoneId="Entrepot" variable="Volume" />
+	<modify-zone-variable zoneId="Entrepot" variable="Volume" value="359.9505055864501" />
+	<add-zone-variable zoneId="Entrepot" variable="Illuminance" />
+	<modify-zone-variable zoneId="Entrepot" variable="Illuminance" value="2075.5092956833178" />
+
+	<!-- Device Section -->
+
+	<!-- Accueil -->
+	<create-device id="Siren-Accueil" type="iCasa.Siren" />
+	<move-device-zone deviceId="Siren-Accueil" zoneId="Accueil" />
+	<create-device id="PresenceSensor-Accueil" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-Accueil" zoneId="Accueil" />
+	<create-device id="BinaryLight-Accueil" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Accueil" zoneId="Accueil" />
+	<create-device id="ToggleSwitch-Entrepot" type="iCasa.ToggleSwitch" />
+	<move-device-zone deviceId="ToggleSwitch-Entrepot" zoneId="Accueil" />
+
+	<!-- Controle -->
+	<create-device id="BinaryLight-Controle" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Controle" zoneId="Contrôle" />
+	<create-device id="PresenceSensor-Controle" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-Controle" zoneId="Contrôle" />
+
+	<!-- Stockage 1 -->
+	<create-device id="BinaryLight-Stockage1-1" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage1-1" zoneId="Stockage 1" />
+	<create-device id="BinaryLight-Stockage1-2" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage1-2" zoneId="Stockage 1" />
+	<create-device id="BinaryLight-Stockage1-3" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage1-3" zoneId="Stockage 1" />
+	<create-device id="BinaryLight-Stockage1-4" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage1-4" zoneId="Stockage 1" />
+	<create-device id="BinaryLight-Stockage1-5" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage1-5" zoneId="Stockage 1" />
+	<create-device id="BinaryLight-Stockage1-6" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage1-6" zoneId="Stockage 1" />
+	<create-device id="Siren-Stockage1" type="iCasa.Siren" />
+	<move-device-zone deviceId="Siren-Stockage1" zoneId="Stockage 1" />
+	<create-device id="PresenceSensor-Stockage1" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-Stockage1" zoneId="Stockage 1" />
+	<create-device id="PresenceSensor-Stockage1-2" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-Stockage1-2" zoneId="Stockage 1" />
+
+	<!-- Stockage2 -->
+	<create-device id="BinaryLight-Stockage2-1" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage2-1" zoneId="Stockage 2" />
+	<create-device id="BinaryLight-Stockage2-2" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage2-2" zoneId="Stockage 2" />
+	<create-device id="BinaryLight-Stockage2-3" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage2-3" zoneId="Stockage 2" />
+	<create-device id="Siren-Stockage2" type="iCasa.Siren" />
+	<move-device-zone deviceId="Siren-Stockage2" zoneId="Stockage 2" />
+	<create-device id="PresenceSensor-Stockage2" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-Stockage2" zoneId="Stockage 2" />
+
+	<!-- Stockage3 -->
+	<create-device id="BinaryLight-Stockage3-1" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage3-1" zoneId="Stockage 3" />
+	<create-device id="BinaryLight-Stockage3-2" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage3-2" zoneId="Stockage 3" />
+	<create-device id="BinaryLight-Stockage3-3" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-Stockage3-3" zoneId="Stockage 3" />
+	<create-device id="Siren-Stockage3" type="iCasa.Siren" />
+	<move-device-zone deviceId="Siren-Stockage3" zoneId="Stockage 3" />
+	<create-device id="PresenceSensor-Stockage3" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-Stockage3" zoneId="Stockage 3" />
+
+	<!-- Parking Patrons -->
+	<create-device id="BinaryLight-ParkingPatrons" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-ParkingPatrons" zoneId="Parking Patrons" />
+	<create-device id="PresenceSensor-ParkingPatrons" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-ParkingPatrons" zoneId="Parking Patrons" />
+	<create-device id="Siren-ParkingPatrons" type="iCasa.Siren" />
+	<move-device-zone deviceId="Siren-ParkingPatrons" zoneId="Parking Patrons" />
+
+	<!-- Parking Employes -->
+	<create-device id="BinaryLight-ParkingEmployes" type="iCasa.BinaryLight" />
+	<move-device-zone deviceId="BinaryLight-ParkingEmployes" zoneId="Parking Employés" />
+	<create-device id="PresenceSensor-ParkingEmployes" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor-ParkingEmployes" zoneId="Parking Employés" />
+	<create-device id="Siren-ParkingEmployes" type="iCasa.Siren" />
+	<move-device-zone deviceId="Siren-ParkingEmployes" zoneId="Parking Employés" />
+	
+
+	<!-- Person Section -->
+
+	<create-person id="Gardien" type="Man" />
+	<move-person-zone personId="Gardien" zoneId="Entrepot" />
+	<create-person id="Gardien2" type="Man" />
+	<move-person-zone personId="Gardien2" zoneId="Contrôle" />
+	<create-person id="Secretaire" type="Man" />
+	<move-person-zone personId="Secretaire" zoneId="Accueil" />
+	<create-person id="Patron" type="Man" />
+	<move-person-zone personId="Patron" zoneId="Stockage 1 " />
+	<create-person id="Employe" type="Man" />
+	<move-person-zone personId="Employe" zoneId="Stockage 2 " />
+	<create-person id="Employe2" type="Woman" />
+	<move-person-zone personId="Employe2" zoneId="Stockage 3 " />
+
+</behavior>
