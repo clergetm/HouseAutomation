@@ -1,11 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Warehouse-client-time
+Bundle-Name: warehouse-day-light-commands
+Bundle-SymbolicName: warehouse.mode.day.light.commands
 Bundle-Version: 0.0.1
-Export-Package: fr.uga.warehouse.client.time
-Require-Bundle: joda-time
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-SymbolicName: Warehouse-client-time
 Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, fr.
  liglab.adele.icasa.access.command, fr.liglab.adele.icasa.application, f
  r.liglab.adele.icasa.application.impl, fr.liglab.adele.icasa.applicatio
@@ -38,31 +35,26 @@ Import-Package: fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, fr.
  sa.simulator, fr.liglab.adele.icasa.simulator.listener, fr.liglab.adele
  .icasa.simulator.listener.util, fr.liglab.adele.icasa.simulator.remote.
  wisdom.util, fr.liglab.adele.icasa.simulator.script.executor, fr.liglab
- .adele.icasa.simulator.services, org.apache.felix.ipojo;version="[1.12.
- 1,2.0.0)", org.apache.felix.ipojo.architecture;version="[1.12.1,2.0.0)"
- , org.joda.time;version=2.7.0, org.json, org.osgi.service.cm;version=1.
- 2, org.osgi.service.log;version=1.3
+ .adele.icasa.simulator.services, fr.uga.warehouse.mode.day.light.manage
+ r, org.apache.felix.ipojo;version="[1.12.1,2.0.0)", org.apache.felix.ip
+ ojo.architecture;version="[1.12.1,2.0.0)", org.json, org.osgi.service.c
+ m;version=1.2, org.osgi.service.log;version=1.3
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Created-By: iPOJO 1.12.1
-iPOJO-Components: instance { $component="TimeComponent" $name="TimeCompo
- nent" }component { $classname="fr.uga.warehouse.client.time.impl.TimeIm
- pl" $name="TimeComponent" callback { $method="start" $transition="valid
- ate" }callback { $method="stop" $transition="invalidate" }provides { $s
- pecifications="fr.uga.warehouse.client.time.TimeService" }provides { $s
- pecifications="fr.liglab.adele.icasa.service.scheduler.PeriodicRunnable
- " }requires { $specification="fr.liglab.adele.icasa.clockservice.Clock"
-  $field="clock" }manipulation { $classname="fr.uga.warehouse.client.tim
- e.impl.TimeImpl" interface { $name="fr.uga.warehouse.client.time.TimeSe
- rvice" }interface { $name="fr.liglab.adele.icasa.service.scheduler.Peri
- odicRunnable" }field { $name="clock" $type="fr.liglab.adele.icasa.clock
- service.Clock" }field { $name="hour" $type="int" }field { $name="listen
- ers" $type="java.util.List" }field { $name="moment" $type="fr.uga.wareh
- ouse.client.time.MomentOfTheDay" }method { $name="getMomentOfTheDay" $r
- eturn="fr.uga.warehouse.client.time.MomentOfTheDay" }method { $name="ge
- tCurrentHour" $return="int" }method { $name="run" }method { $name="getP
- eriod" $return="long" }method { $name="getUnit" $return="java.util.conc
- urrent.TimeUnit" }method { $name="register" $arguments="{fr.uga.warehou
- se.client.time.MomentOfTheDayListener}" $names="{listener}" }method { $
- name="unregister" $arguments="{fr.uga.warehouse.client.time.MomentOfThe
- DayListener}" $names="{listener}" }method { $name="stop" }method { $nam
- e="start" }}}
+iPOJO-Components: instance { $name="fr.uga.warehouse.mode.day.light.comm
+ ands" $component="fr.uga.warehouse.mode.day.light.commands.LightCommand
+ sImpl" }component { $name="fr.uga.warehouse.mode.day.light.commands.Lig
+ htCommandsImpl" $classname="fr.uga.warehouse.mode.day.light.commands.Li
+ ghtCommandsImpl" fr.liglab.adele.icasa.command.handler:commandprovider 
+ { $namespace="lightcmd" fr.liglab.adele.icasa.command.handler:command {
+  $method="reset" }fr.liglab.adele.icasa.command.handler:command { $meth
+ od="turnLightsOff" }fr.liglab.adele.icasa.command.handler:command { $me
+ thod="turnLightsOn" }}requires { $field="lightAdministrationService" }c
+ allback { $transition="invalidate" $method="stop" }callback { $transiti
+ on="validate" $method="start" }manipulation { $classname="fr.uga.wareho
+ use.mode.day.light.commands.LightCommandsImpl" field { $name="lightAdmi
+ nistrationService" $type="fr.uga.warehouse.mode.day.light.manager.Light
+ Administration" }method { $name="reset" }method { $name="turnLightsOff"
+  }method { $name="turnLightsOn" }method { $name="stop" }method { $name=
+ "start" }}}
 

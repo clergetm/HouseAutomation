@@ -98,13 +98,27 @@
 	<move-device-zone deviceId="BinaryLight-Accueil" zoneId="Accueil" />
 	<create-device id="ToggleSwitch-Accueil" type="iCasa.ToggleSwitch" />
 	<move-device-zone deviceId="ToggleSwitch-Accueil" zoneId="Accueil" />
+	<create-device id="Thermometer-Accueil" type="iCasa.Thermometer" />
+	<move-device-zone deviceId="Thermometer-Accueil" zoneId="Accueil" />
+	<create-device id="Heater-Accueil" type="iCasa.Heater" />
+	<move-device-zone deviceId="Heater-Accueil" zoneId="Accueil" />
+	<create-device id="Cooler-Accueil" type="iCasa.Cooler" />
+	<move-device-zone deviceId="Cooler-Accueil" zoneId="Accueil" />
 
+	
 	<!-- Controle -->
 	<create-device id="BinaryLight-Controle" type="iCasa.BinaryLight" />
 	<move-device-zone deviceId="BinaryLight-Controle" zoneId="Contrôle" />
 	<create-device id="PresenceSensor-Controle" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Controle" zoneId="Contrôle" />
+	<create-device id="Thermometer-Controle" type="iCasa.Thermometer" />
+	<move-device-zone deviceId="Thermometer-Controle" zoneId="Contrôle" />
+	<create-device id="Heater-Controle" type="iCasa.Heater" />
+	<move-device-zone deviceId="Heater-Controle" zoneId="Contrôle" />
+	<create-device id="Cooler-Controle" type="iCasa.Cooler" />
+	<move-device-zone deviceId="Cooler-Controle" zoneId="Contrôle" />
 
+	
 	<!-- Stockage 1 -->
 	<create-device id="BinaryLight-Stockage1-1" type="iCasa.BinaryLight" />
 	<move-device-zone deviceId="BinaryLight-Stockage1-1" zoneId="Stockage 1" />
@@ -122,6 +136,12 @@
 	<move-device-zone deviceId="Siren-Stockage1" zoneId="Stockage 1" />
 	<create-device id="PresenceSensor-Stockage1" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Stockage1" zoneId="Stockage 1" />
+	<create-device id="Thermometer-Stockage1" type="iCasa.Thermometer" />
+	<move-device-zone deviceId="Thermometer-Stockage1" zoneId="Stockage 1" />
+	<create-device id="Heater-Stockage1" type="iCasa.Heater" />
+	<move-device-zone deviceId="Heater-Stockage1" zoneId="Stockage 1" />
+	<create-device id="Cooler-Stockage1" type="iCasa.Cooler" />
+	<move-device-zone deviceId="Cooler-Stockage1" zoneId="Stockage 1" />
 
 	<!-- Stockage2 -->
 	<create-device id="BinaryLight-Stockage2-1" type="iCasa.BinaryLight" />
@@ -134,6 +154,12 @@
 	<move-device-zone deviceId="Siren-Stockage2" zoneId="Stockage 2" />
 	<create-device id="PresenceSensor-Stockage2" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Stockage2" zoneId="Stockage 2" />
+	<create-device id="Thermometer-Stockage2" type="iCasa.Thermometer" />
+	<move-device-zone deviceId="Thermometer-Stockage2" zoneId="Stockage 2" />
+	<create-device id="Heater-Stockage2" type="iCasa.Heater" />
+	<move-device-zone deviceId="Heater-Stockage2" zoneId="Stockage 2" />
+	<create-device id="Cooler-Stockage2" type="iCasa.Cooler" />
+	<move-device-zone deviceId="Cooler-Stockage2" zoneId="Stockage 2" />
 
 	<!-- Stockage3 -->
 	<create-device id="BinaryLight-Stockage3-1" type="iCasa.BinaryLight" />
@@ -146,6 +172,12 @@
 	<move-device-zone deviceId="Siren-Stockage3" zoneId="Stockage 3" />
 	<create-device id="PresenceSensor-Stockage3" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Stockage3" zoneId="Stockage 3" />
+	<create-device id="Thermometer-Stockage3" type="iCasa.Thermometer" />
+	<move-device-zone deviceId="Thermometer-Stockage3" zoneId="Stockage 3" />
+	<create-device id="Heater-Stockage3" type="iCasa.Heater" />
+	<move-device-zone deviceId="Heater-Stockage3" zoneId="Stockage 3" />
+	<create-device id="Cooler-Stockage3" type="iCasa.Cooler" />
+	<move-device-zone deviceId="Cooler-Stockage3" zoneId="Stockage 3" />
 
 	<!-- Parking Patrons -->
 	<create-device id="BinaryLight-ParkingPatrons" type="iCasa.BinaryLight" />
