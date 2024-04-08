@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Warehouse-day-light-listener
 Bundle-SymbolicName: warehouse.mode.day.light.listener
-Bundle-Version: 0.0.1
+Bundle-Version: 0.0.2
 Export-Package: fr.uga.warehouse.mode.day.light.service.autoon,fr.uga.wa
  rehouse.mode.day.light.service.onoff
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

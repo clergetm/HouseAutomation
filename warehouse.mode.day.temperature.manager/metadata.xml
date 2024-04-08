@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.day.temperature.manager.impl.TemperatureManagerImpl" name="TemperatureManager">
+    <provides specifications="fr.uga.warehouse.client.time.MomentOfTheDayListener"/>
+    <requires specification="fr.uga.warehouse.client.time.TimeService" field="timeService"/>
+    <requires optional="true" specification="fr.uga.warehouse.mode.day.temperature.controller.TemperatureController" field="controller"/>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <provides specifications="fr.uga.warehouse.mode.day.temperature.manager.TemperatureAdministration"/>
+  </component>
+  <instance component="TemperatureManager" name="TemperatureManager"/>
+</ipojo>
