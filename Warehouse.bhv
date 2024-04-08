@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<behavior factor="1">
+<behavior startdate="03/10/2011-00:00:00" factor="1440">
 
 	<!-- Zone Section -->
 
@@ -51,17 +51,17 @@
 	<add-zone-variable zoneId="Stockage 3" variable="Illuminance" />
 	<modify-zone-variable zoneId="Stockage 3" variable="Illuminance" value="1600.0" />
 
-	<create-zone  id ="Parking Employés" leftX ="-9" topY ="-1" bottomZ ="0" X-Length ="1873" Y-Length ="471" Z-Length ="179"/>
-	<add-zone-variable zoneId="Parking Employés" variable="Area" />
-	<modify-zone-variable zoneId="Parking Employés" variable="Area" value="172.90787770751194" />
-	<add-zone-variable zoneId="Parking Employés" variable="Temperature" />
-	<modify-zone-variable zoneId="Parking Employés" variable="Temperature" value="293.15" />
-	<add-zone-variable zoneId="Parking Employés" variable="Electricity" />
-	<modify-zone-variable zoneId="Parking Employés" variable="Electricity" value="0.0" />
-	<add-zone-variable zoneId="Parking Employés" variable="Volume" />
-	<modify-zone-variable zoneId="Parking Employés" variable="Volume" value="433.30714879052823" />
-	<add-zone-variable zoneId="Parking Employés" variable="Illuminance" />
-	<modify-zone-variable zoneId="Parking Employés" variable="Illuminance" value="1600.0" />
+	<create-zone  id ="Parking Employes" leftX ="-9" topY ="-1" bottomZ ="0" X-Length ="1873" Y-Length ="471" Z-Length ="179"/>
+	<add-zone-variable zoneId="Parking Employes" variable="Area" />
+	<modify-zone-variable zoneId="Parking Employes" variable="Area" value="172.90787770751194" />
+	<add-zone-variable zoneId="Parking Employes" variable="Temperature" />
+	<modify-zone-variable zoneId="Parking Employes" variable="Temperature" value="293.15" />
+	<add-zone-variable zoneId="Parking Employes" variable="Electricity" />
+	<modify-zone-variable zoneId="Parking Employes" variable="Electricity" value="0.0" />
+	<add-zone-variable zoneId="Parking Employes" variable="Volume" />
+	<modify-zone-variable zoneId="Parking Employes" variable="Volume" value="433.30714879052823" />
+	<add-zone-variable zoneId="Parking Employes" variable="Illuminance" />
+	<modify-zone-variable zoneId="Parking Employes" variable="Illuminance" value="1600.0" />
 
 	<create-zone  id ="Accueil" leftX ="401" topY ="877" bottomZ ="0" X-Length ="221" Y-Length ="263" Z-Length ="179"/>
 	<add-zone-variable zoneId="Accueil" variable="Area" />
@@ -86,18 +86,6 @@
 	<modify-zone-variable zoneId="Contrôle" variable="Volume" value="14.239192793107055" />
 	<add-zone-variable zoneId="Contrôle" variable="Illuminance" />
 	<modify-zone-variable zoneId="Contrôle" variable="Illuminance" value="1600.0" />
-
-	<create-zone  id ="Entrepot" leftX ="391" topY ="477" bottomZ ="0" X-Length ="1107" Y-Length ="662" Z-Length ="179"/>
-	<add-zone-variable zoneId="Entrepot" variable="Area" />
-	<modify-zone-variable zoneId="Entrepot" variable="Area" value="143.6354746844636" />
-	<add-zone-variable zoneId="Entrepot" variable="Temperature" />
-	<modify-zone-variable zoneId="Entrepot" variable="Temperature" value="293.15" />
-	<add-zone-variable zoneId="Entrepot" variable="Electricity" />
-	<modify-zone-variable zoneId="Entrepot" variable="Electricity" value="100.0" />
-	<add-zone-variable zoneId="Entrepot" variable="Volume" />
-	<modify-zone-variable zoneId="Entrepot" variable="Volume" value="359.9505055864501" />
-	<add-zone-variable zoneId="Entrepot" variable="Illuminance" />
-	<modify-zone-variable zoneId="Entrepot" variable="Illuminance" value="2075.5092956833178" />
 
 	<!-- Device Section -->
 
@@ -169,17 +157,17 @@
 
 	<!-- Parking Employes -->
 	<create-device id="BinaryLight-ParkingEmployes" type="iCasa.BinaryLight" />
-	<move-device-zone deviceId="BinaryLight-ParkingEmployes" zoneId="Parking Employés" />
+	<move-device-zone deviceId="BinaryLight-ParkingEmployes" zoneId="Parking Employes" />
 	<create-device id="PresenceSensor-ParkingEmployes" type="iCasa.PresenceSensor" />
-	<move-device-zone deviceId="PresenceSensor-ParkingEmployes" zoneId="Parking Employés" />
+	<move-device-zone deviceId="PresenceSensor-ParkingEmployes" zoneId="Parking Employes" />
 	<create-device id="Siren-ParkingEmployes" type="iCasa.Siren" />
-	<move-device-zone deviceId="Siren-ParkingEmployes" zoneId="Parking Employés" />
+	<move-device-zone deviceId="Siren-ParkingEmployes" zoneId="Parking Employes" />
 	
 
 	<!-- Person Section -->
 
 	<create-person id="Gardien" type="Man" />
-	<move-person-zone personId="Gardien" zoneId="Entrepot" />
+	<move-person-zone personId="Gardien" zoneId="Contrôle" />
 	<create-person id="Gardien2" type="Man" />
 	<move-person-zone personId="Gardien2" zoneId="Contrôle" />
 	<create-person id="Secretaire" type="Man" />
