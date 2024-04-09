@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.night.alarm.listener.impl.AlarmListenerImpl" name="AlarmListener">
+    <provides specifications="fr.uga.warehouse.mode.night.alarm.service.onoff.onOffAlarm"/>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.presence.PresenceSensor" field="presenceSensors">
+      <callback method="bindPresenceSensors" type="bind"/>
+      <callback method="unbindPresenceSensors" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.sound.Speaker" field="speakers">
+      <callback method="bindSpeakers" type="bind"/>
+      <callback method="unbindSpeakers" type="unbind"/>
+    </requires>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.sound.AudioSource" field="audioSources">
+      <callback method="bindAudioSource" type="bind"/>
+      <callback method="unbindAudioSource" type="unbind"/>
+    </requires>
+  </component>
+  <instance component="AlarmListener" name="AlarmListener-1"/>
+</ipojo>

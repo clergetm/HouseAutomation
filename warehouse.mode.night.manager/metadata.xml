@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.night.manager.impl.NightManagerImpl" name="NightManager">
+    <provides specifications="fr.uga.warehouse.client.time.MomentOfTheDayListener"/>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <requires specification="fr.uga.warehouse.client.time.TimeService" field="timeService"/>
+    <requires optional="true" specification="fr.uga.warehouse.mode.night.alarm.service.onoff.onOffAlarm" field="alarmService"/>
+    <provides specifications="fr.uga.warehouse.mode.night.manager.AlarmAdministration"/>
+  </component>
+  <instance component="NightManager" name="NightManager-1"/>
+</ipojo>

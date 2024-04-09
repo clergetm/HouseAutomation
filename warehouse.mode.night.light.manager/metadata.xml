@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.night.light.manager.impl.NightLightManagerImpl" name="NightLightManager">
+    <provides specifications="fr.uga.warehouse.mode.night.light.manager.NightLightAdministration"/>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <requires optional="true" specification="fr.uga.warehouse.mode.night.light.service.onoff.onOffLights" field="lightService"/>
+  </component>
+</ipojo>
