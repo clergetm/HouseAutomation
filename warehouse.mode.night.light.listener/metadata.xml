@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="fr.uga.warehouse.mode.night.light.listener.impl.NightLightListenerImpl" name="NightLightListener">
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.BinaryLight" field="binaryLights">
+      <callback method="bindBinaryLights" type="bind"/>
+      <callback method="unbindBinaryLights" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.presence.PresenceSensor" field="presenceSensors">
+      <callback method="bindPresenceSensor" type="bind"/>
+      <callback method="unbindPresenceSensor" type="unbind"/>
+    </requires>
+    <provides specifications="fr.uga.warehouse.mode.night.light.service.onoff.onOffLights"/>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.sound.Speaker" field="speakers">
+      <callback method="bindSpeaker" type="bind"/>
+      <callback method="unbindSpeaker" type="unbind"/>
+    </requires>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+  </component>
+  <instance component="NightLightListener" name="NightLightListener-1"/>
+</ipojo>

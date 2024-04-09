@@ -1,0 +1,68 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Warehouse-night-manager
+Bundle-SymbolicName: warehouse.mode.night.manager
+Bundle-Version: 1.0.0.qualifier
+Export-Package: fr.uga.warehouse.mode.night.manager
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Created-By: iPOJO 1.12.1
+Import-Package: fr.liglab.adele.common.dp.autoload.res.proc;version="[1.
+ 2.0,2.0.0]", fr.liglab.adele.icasa, fr.liglab.adele.icasa.access, fr.li
+ glab.adele.icasa.access.command, fr.liglab.adele.icasa.application, fr.
+ liglab.adele.icasa.application.impl, fr.liglab.adele.icasa.application.
+ impl.command, fr.liglab.adele.icasa.application.remote, fr.liglab.adele
+ .icasa.application.remote.util, fr.liglab.adele.icasa.clockservice, fr.
+ liglab.adele.icasa.clockservice.impl, fr.liglab.adele.icasa.clockservic
+ e.util, fr.liglab.adele.icasa.command, fr.liglab.adele.icasa.command.ha
+ ndler, fr.liglab.adele.icasa.commands, fr.liglab.adele.icasa.commands.i
+ mpl, fr.liglab.adele.icasa.common, fr.liglab.adele.icasa.common.impl, f
+ r.liglab.adele.icasa.common.xml.utils, fr.liglab.adele.icasa.dependency
+ .manager.exception, fr.liglab.adele.icasa.device, fr.liglab.adele.icasa
+ .device.bathroomscale, fr.liglab.adele.icasa.device.box, fr.liglab.adel
+ e.icasa.device.button, fr.liglab.adele.icasa.device.button.simulated, f
+ r.liglab.adele.icasa.device.doorWindow, fr.liglab.adele.icasa.device.ga
+ sSensor, fr.liglab.adele.icasa.device.light, fr.liglab.adele.icasa.devi
+ ce.manager, fr.liglab.adele.icasa.device.motion, fr.liglab.adele.icasa.
+ device.power, fr.liglab.adele.icasa.device.presence, fr.liglab.adele.ic
+ asa.device.security, fr.liglab.adele.icasa.device.settopbox, fr.liglab.
+ adele.icasa.device.sound, fr.liglab.adele.icasa.device.sprinkler, fr.li
+ glab.adele.icasa.device.temperature, fr.liglab.adele.icasa.device.util,
+  fr.liglab.adele.icasa.exception, fr.liglab.adele.icasa.frontend.servic
+ es, fr.liglab.adele.icasa.frontend.services.rest, fr.liglab.adele.icasa
+ .frontend.services.utils, fr.liglab.adele.icasa.listener, fr.liglab.ade
+ le.icasa.location, fr.liglab.adele.icasa.location.impl, fr.liglab.adele
+ .icasa.location.util, fr.liglab.adele.icasa.remote.wisdom, fr.liglab.ad
+ ele.icasa.remote.wisdom.util, fr.liglab.adele.icasa.service.location, f
+ r.liglab.adele.icasa.service.preferences, fr.liglab.adele.icasa.service
+ .scheduler, fr.liglab.adele.icasa.service.zone.dimension.calculator, fr
+ .liglab.adele.icasa.service.zone.size.calculator, fr.liglab.adele.icasa
+ .simulator, fr.liglab.adele.icasa.simulator.listener, fr.liglab.adele.i
+ casa.simulator.listener.util, fr.liglab.adele.icasa.simulator.remote.wi
+ sdom.util, fr.liglab.adele.icasa.simulator.script.executor, fr.liglab.a
+ dele.icasa.simulator.services, fr.uga.warehouse.client.time, fr.uga.war
+ ehouse.mode.night.alarm.service.onoff, fr.uga.warehouse.mode.night.mana
+ ger, org.apache.felix.ipojo;version="[1.12.1,2.0.0)", org.apache.felix.
+ ipojo.architecture;version="[1.12.1,2.0.0)", org.json, org.osgi.service
+ .cm;version=1.2, org.osgi.service.log;version=1.3
+iPOJO-Components: instance { $component="NightManager" $name="NightManag
+ er-1" }component { $classname="fr.uga.warehouse.mode.night.manager.impl
+ .NightManagerImpl" $name="NightManager" provides { $specifications="fr.
+ uga.warehouse.client.time.MomentOfTheDayListener" }provides { $specific
+ ations="fr.uga.warehouse.mode.night.manager.AlarmAdministration" }callb
+ ack { $method="start" $transition="validate" }callback { $method="stop"
+  $transition="invalidate" }requires { $specification="fr.uga.warehouse.
+ client.time.TimeService" $field="timeService" }requires { $optional="tr
+ ue" $specification="fr.uga.warehouse.mode.night.alarm.service.onoff.onO
+ ffAlarm" $field="alarmService" }manipulation { $classname="fr.uga.wareh
+ ouse.mode.night.manager.impl.NightManagerImpl" interface { $name="fr.ug
+ a.warehouse.client.time.MomentOfTheDayListener" }interface { $name="fr.
+ uga.warehouse.mode.night.manager.AlarmAdministration" }field { $name="a
+ larmService" $type="fr.uga.warehouse.mode.night.alarm.service.onoff.onO
+ ffAlarm" }field { $name="timeService" $type="fr.uga.warehouse.client.ti
+ me.TimeService" }method { $name="hourHasChanged" $arguments="{int}" $na
+ mes="{h}" }method { $name="momentOfTheDayHasChanged" $arguments="{fr.ug
+ a.warehouse.client.time.MomentOfTheDay}" $names="{newMomentOfTheDay}" }
+ method { $name="stop" }method { $name="start" }method { $name="enableAl
+ armMode" }method { $name="disableAlarmMode" }method { $name="turnAlarmO
+ n" }method { $name="turnAlarmOff" }}}
+
