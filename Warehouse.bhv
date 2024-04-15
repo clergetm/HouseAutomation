@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<behavior startdate="03/10/2011-00:00:00" factor="1440">
+<behavior startdate="03/10/2011-00:00:00" factor="720">
 
 	<!-- Zone Section -->
 
@@ -86,13 +86,19 @@
 	<modify-zone-variable zoneId="Contrôle" variable="Volume" value="14.239192793107055" />
 	<add-zone-variable zoneId="Contrôle" variable="Illuminance" />
 	<modify-zone-variable zoneId="Contrôle" variable="Illuminance" value="1600.0" />
+
+
 	<!-- Device Section -->
 
 	<!-- Accueil -->
 	<create-device id="Speaker-Accueil" type="iCasa.Speaker" />
 	<move-device-zone deviceId="Speaker-Accueil" zoneId="Accueil" />
+	<create-device id="Speaker2-Accueil" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker2-Accueil" zoneId="Accueil" />
 	<create-device id="PresenceSensor-Accueil" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Accueil" zoneId="Accueil" />
+	<create-device id="PresenceSensor2-Accueil" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-Accueil" zoneId="Accueil" />
 	<create-device id="BinaryLight-Accueil" type="iCasa.BinaryLight" />
 	<move-device-zone deviceId="BinaryLight-Accueil" zoneId="Accueil" />
 	<create-device id="ToggleSwitch-Accueil" type="iCasa.ToggleSwitch" />
@@ -110,6 +116,12 @@
 	<move-device-zone deviceId="BinaryLight-Controle" zoneId="Contrôle" />
 	<create-device id="PresenceSensor-Controle" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Controle" zoneId="Contrôle" />
+	<create-device id="Speaker-Controle" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker-Controle" zoneId="Contrôle" />
+	<create-device id="PresenceSensor2-Controle" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-Controle" zoneId="Contrôle" />
+	<create-device id="Speaker-Controle2" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker-Controle2" zoneId="Contrôle" />
 	<create-device id="Thermometer-Controle" type="iCasa.Thermometer" />
 	<move-device-zone deviceId="Thermometer-Controle" zoneId="Contrôle" />
 	<create-device id="Heater-Controle" type="iCasa.Heater" />
@@ -135,6 +147,10 @@
 	<move-device-zone deviceId="Speaker-Stockage1" zoneId="Stockage 1" />
 	<create-device id="PresenceSensor-Stockage1" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Stockage1" zoneId="Stockage 1" />
+	<create-device id="Speaker2-Stockage1" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker2-Stockage1" zoneId="Stockage 1" />
+	<create-device id="PresenceSensor2-Stockage1" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-Stockage1" zoneId="Stockage 1" />
 	<create-device id="Thermometer-Stockage1" type="iCasa.Thermometer" />
 	<move-device-zone deviceId="Thermometer-Stockage1" zoneId="Stockage 1" />
 	<create-device id="Heater-Stockage1" type="iCasa.Heater" />
@@ -153,6 +169,10 @@
 	<move-device-zone deviceId="Speaker-Stockage2" zoneId="Stockage 2" />
 	<create-device id="PresenceSensor-Stockage2" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Stockage2" zoneId="Stockage 2" />
+	<create-device id="Speaker2-Stockage2" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker2-Stockage2" zoneId="Stockage 2" />
+	<create-device id="PresenceSensor2-Stockage2" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-Stockage2" zoneId="Stockage 2" />
 	<create-device id="Thermometer-Stockage2" type="iCasa.Thermometer" />
 	<move-device-zone deviceId="Thermometer-Stockage2" zoneId="Stockage 2" />
 	<create-device id="Heater-Stockage2" type="iCasa.Heater" />
@@ -171,6 +191,10 @@
 	<move-device-zone deviceId="Speaker-Stockage3" zoneId="Stockage 3" />
 	<create-device id="PresenceSensor-Stockage3" type="iCasa.PresenceSensor" />
 	<move-device-zone deviceId="PresenceSensor-Stockage3" zoneId="Stockage 3" />
+	<create-device id="Speaker2-Stockage3" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker2-Stockage3" zoneId="Stockage 3" />
+	<create-device id="PresenceSensor2-Stockage3" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-Stockage3" zoneId="Stockage 3" />
 	<create-device id="Thermometer-Stockage3" type="iCasa.Thermometer" />
 	<move-device-zone deviceId="Thermometer-Stockage3" zoneId="Stockage 3" />
 	<create-device id="Heater-Stockage3" type="iCasa.Heater" />
@@ -185,6 +209,10 @@
 	<move-device-zone deviceId="PresenceSensor-ParkingPatrons" zoneId="Parking Patrons" />
 	<create-device id="Speaker-ParkingPatrons" type="iCasa.Speaker" />
 	<move-device-zone deviceId="Speaker-ParkingPatrons" zoneId="Parking Patrons" />
+	<create-device id="PresenceSensor2-ParkingPatrons" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-ParkingPatrons" zoneId="Parking Patrons" />
+	<create-device id="Speaker2-ParkingPatrons" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker2-ParkingPatrons" zoneId="Parking Patrons" />
 
 	<!-- Parking Employe -->
 	<create-device id="BinaryLight-ParkingEmploye" type="iCasa.BinaryLight" />
@@ -193,6 +221,10 @@
 	<move-device-zone deviceId="PresenceSensor-ParkingEmploye" zoneId="Parking Employe" />
 	<create-device id="Speaker-ParkingEmploye" type="iCasa.Speaker" />
 	<move-device-zone deviceId="Speaker-ParkingEmploye" zoneId="Parking Employe" />
+	<create-device id="PresenceSensor2-ParkingEmploye" type="iCasa.PresenceSensor" />
+	<move-device-zone deviceId="PresenceSensor2-ParkingEmploye" zoneId="Parking Employe" />
+	<create-device id="Speaker2-ParkingEmploye" type="iCasa.Speaker" />
+	<move-device-zone deviceId="Speaker2-ParkingEmploye" zoneId="Parking Employe" />
 	
 	
 
